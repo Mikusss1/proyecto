@@ -1,0 +1,33 @@
+
+ .calc{ 
+   width: 30%;
+   height: 60%;
+   position: absolute;
+   background-color: pink;
+   border: 2px solid black;
+   border-radius: 10px ;
+}
+  #ans{ 
+width: 100%;
+margin-top: 20px;
+font-family: arial;
+color: red;
+text-align: right;
+   }
+   .btn input[type='button']{ 
+width: 40px;
+padding: 2px;
+margin :4px;
+position: relative;
+left: 0px;
+top :20px;
+height: 55px;
+cursor: pointer;
+font-size: 16px;
+transition: all 0.5s ease ;
+border-radius: 6px;
+ }
+   .btn input[type='button']:hover{ 
+background-color: pink;
+color: white;
+    }

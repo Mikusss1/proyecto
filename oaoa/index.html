@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+	crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="footer.css">
+   <link href="https://fonts.cdnfonts.com/css/super-bubble" rel="stylesheet">
+                
+    
+         <title></title>
+    </head> 
+    <body>
+        <div style="margin: 24px;">
+            <nav class="navbar navbar-light" style="background-color: #264F83;">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html" class="active">Inicio</a>
+                    <ul class="nav navbar-nav">
+                        
+                        <li>
+                            <a href="menu.html">Menu</a>
+                        </li>
+                        <li>
+                            <a href="formulario.html">Formulario</a>
+                        </li>
+                        <li>
+                            <a href="resultado.html">Resultado</a>
+                        </li>
+                        <li>
+                            <a href="cont.html">Contacto</a>
+                        </li>
+                            <li>
+                                <a href="calculadorafisica1.html">Fisica</a>
+                            </li>
+                            <li>
+                                <a href="calculadora.html">Calculadora</a>
+                            </li>
+                
+                        <li>
+                            <a href="apimovie.html">Peliculas</a>
+                        </li>
+
+                        <li>
+                            <a href="perfil.html">Perfil</a>
+                        </li>
+                        <li>
+                            <a href="cuestionario.html">Custionario</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div style="position: relative;color:cornsilk;  ">
+            <video autoplay muted preload loop>
+                <source src="/pagina/oaoa/aaa.mp4" type="video/mp4">
+            </video>
+            <h1 class="titulo">Bienvenidos</h1>
+        </div>
+
+
+
+        <footer>
+            <div class="container">
+              <div class="footer-content">
+                <div class="footer-section about">
+                  <h2>Contactame</h2>
+                  <p>Si estas interesado en contactarme, puedes hacerlo en cualquiera de las siguientes redes sociales:</p>
+                 <div class="contact-links">
+                  <a href="http://www.facebook.com/miperfil" target="_blank"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/r0ssy.yy" target="_blank"><i class="fab fa-instagram"></i></a>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          
+          <script type="text/javascript">
+            const socialnetworks = document.querySelectorAll('.contact-links a');
+            socialnetworks.forEach(link =>{
+              link.addEventListener('click', e=>{
+                e.preventDefault();
+                window.open(link.href, '_blank');
+          
+              });
+            });
+            </script>
+        
+    </body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
+       <link rel="stylesheet" type="text/css" href="footer.css">
+       <link href="https://fonts.cdnfonts.com/css/super-bubble" rel="stylesheet">
+    </head> 
+    <body>
+        <div style="margin: 24px;">
+            <nav class="navbar navbar-light" style="background-color: #264F83;">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">Inicio</a>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="menu.html">Menu</a>
+                        </li>
+                        <li>
+                            <a href="formulario.html">Formulario</a>
+                        </li>
+                        <li>
+                            <a href="resultado.html">Resultado</a>
+                        </li>
+                        <li>
+                            <a href="cont.html">Contacto</a>
+                        </li>
+                            <li>
+                                <a href="calculadorafisica1.html">Fisica</a>
+                            </li>
+                            <li>
+                                <a href="calculadora.html">Calculadora</a>
+                            </li>
+                        
+                        <li>
+                            <a href="apimovie.html">Peliculas</a>
+                        </li>
+                        <li>
+                            <a href="perfil.html">Perfil</a>
+                        </li>
+                        <li class="active">
+                            <a href="cuestionario.html">Custionario</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <style>
+            body{
+                 align-items: center;
+                 justify-content: center;
+                 overflow: hidden;
+                 margin: 0;
+            }
+            .quiz-container{
+                outline: 1px;
+                background-color: #fdc2d1 ;
+                border-radius: 10px;
+                box-shadow: 0 0 10px 2px rgb(121, 84, 90);
+                width: 500px;
+                overflow: hidden;
+            }
+            .quiz-header{
+                padding: 4rem;
+            }
+            h2{
+                padding: 1rem;
+                text-align: center;
+                margin: 0;
+            }
+            ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            ul li{
+                font-size: 14px;
+                margin: 10px 0;
+            }
+            ul li label{
+                cursor: pointer;
+            }
+            button{
+                background-color: #70434e;
+                color: azure;
+                border: none;
+                display: block;
+                width: 100%;
+                cursor: pointer;
+                font-size: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 15px;
+            }
+            button:hover{
+                background-color: #9b5f6e;
+            }
+            button:focus{
+                outline: none;
+                background-color: #cc8093;
+            }
+        </style>
+
+        <div class="container">
+  <div class="quiz-container" id="quiz">
+    <div class="quiz-header">
+      <div class="image-container">
+        <center><img src="imagen.jpeg" alt="Imagen" id="question-image" style="width: 250px; height: 200px;"></center>
+      </div>
+      <h2 id="question">Question Text</h2>
+      <ul>
+        <li>
+          <input type="radio" name="answer"
+          id="a" class="answer">
+          <label for="a" id="a_text">Question</label>
+        </li>
+
+          <li>
+          <input type="radio" name="answer"
+          id="b" class="answer">
+          <label for="b" id="b_text">Question</label>
+        </li>
+
+             <li>
+          <input type="radio" name="answer"
+          id="c" class="answer">
+          <label for="c" id="c_text">Question</label>
+        </li>
+
+              <li>
+          <input type="radio" name="answer"
+          id="d" class="answer">
+          <label for="d" id="d_text">Question</label>
+        </li>
+      </ul>
+    </div>
+<button id="submit">Submit</button>
+  </div>
+</div>
+<script>
+  //
+  const quizData = [
+
+{
+  question: "1. ¿Cómo se llama la empresa creadora de vocaloid?",
+  image: "1.jpg",
+  a:"MikuMikuDance",
+  b:"Crypton Future Media",
+  c:"Yamaha KX5",
+  d:"V4X Software",
+  correct: "b",
+
+  },
+
+
+{
+  question: "2. ¿Cuántos vocaloid principales son?",
+  image: "2.jpeg",
+  a:"9",
+  b:"7",
+  c:"6",
+  d:"3",
+  correct: "b",
+
+  },
+
+{
+  question: "3. ¿En que año se creo Miku Hatsune?",
+  image: "3.jpg",
+  a:"2000",
+  b:"1998",
+  c:"2007",
+  d:"2012",
+  correct: "c",
+
+  },
+
+  {
+  question: "4. ¿Quién tiene escrito el numero 02 en el hombro?",
+  image: "4.jpg",
+  a:"Miku Hatsune",
+  b:"Kaito",
+  c:"Len ",
+  d:"Rin y Len",
+  correct: "d",
+  },
+
+    {
+  question: "5. ¿Qué cancion no canta Len Kagamine?",
+  image: "5.jpg",
+  a:"Spice!",
+  b:"Cendrillon",
+  c:"Erase or zero",
+  d:"Todas las canta el",
+  correct: "b",
+  },
+
+  {
+  question: "6. ¿Cómo se llama el creador de la cancion gomen ne gomen ne?",
+  image: "6.jpg",
+  a:"Kikuo",
+  b:"Mafu Mafu",
+  c:"Kurousa-P",
+  d:"Ado",
+  correct: "a",
+  },
+
+    {
+  question: "7. ¿Quién de los vocaloid tuvo mas fama?",
+  image: "7.jpg",
+  a:"Luka Megurine",
+  b:"Len Kagamine",
+  c:"Miku Hatsune",
+  d:"Kaito",
+  correct: "c",
+  },
+
+    {
+  question: "8. ¿Cuál es el nombre de esta cancion?",
+  image: "8.jpeg",
+  a:"Anonymous M",
+  b:"Romeo and Cinderella",
+  c:"The End of Hatsune Miku",
+  d:"Meltdown",
+  correct: "a",
+  },
+
+    {
+  question: "9. ¿Cuál fue el año que se creo la empresa crypton?",
+  image: "9.jpg",
+  a:"2000",
+  b:"1995",
+  c:"1900",
+  d:"1987",
+  correct: "b",
+  },
+
+    {
+  question: "10. ¿Cómo se llamo el chico que le dio voz a kaito?",
+  image: "10.jpg",
+  a:"Jordi Bonada",
+  b:"Naoto Fūga",
+  c:"Michael King",
+  d:"Hitoshi Ueki ",
+  correct: "b",
+  },
+
+      {
+  question: "11. ¿Existen videojuegos de vocaloid?",
+  image: "11.jpeg",
+  a:"Si, con seguridad",
+  b:"No lo se",
+  c:"No",
+  d:"Fueron solo rumores",
+  correct: "a",
+  },
+
+
+    {
+  question: "12. En las canciones de la saga del mal, ¿sobre qué trataba?",
+  image: "12.jpg",
+  a:"Karma",
+  b:"Tristeza",
+  c:"Pecados",
+  d:"Amor",
+  correct: "c",
+  },
+
+   
+    {
+  question: "13. ¿Cómo se llamaba Rin kagamine en la novela de La hija del mal?",
+  image: "13.jpeg",
+  a:"Allen",
+  b:"Rilliane",
+  c:"Margarita",
+  d:"Conchita",
+  correct: "b",
+  },
+
+
+      {
+  question: "14. ¿Cómo se llama el personaje que canta esta cancion?",
+  image: "14.jepg",
+  a:"Luka Megurine",
+  b:"Meiko",
+  c:"Haku",
+  d:"Gumi",
+  correct: "d",
+  },
+
+
+      {
+  question: "15. ¿En que vocaloid salio Miku Hatsune?",
+  image: "15.jpg",
+  a:"Vocaloid",
+  b:"Vocaloid6",
+  c:"Vocaloid2",
+  d:"Vocaloid3",
+  correct: "c",
+  },
+
+      {
+  question: "16. ¿Que son los vocaloid?",
+  image: "16.jpg",
+  a:"Son de un anime",
+  b:"Un videojuego",
+  c:" son Idols",
+  d:"Ninguno",
+  correct: "c",
+  },
+
+      {
+  question: "17. ¿Cuántos años tiene Rin kagamine?",
+  image: "17.jpeg",
+  a:"18",
+  b:"12",
+  c:"14",
+  d:"16",
+  correct: "d",
+  },
+
+      {
+  question: "18. ¿Que cancion canta Meiko junto con Kaito?",
+  image: "18.jpeg",
+  a:"Magnet",
+  b:"On the Rocks",
+  c:"Electric Angel",
+  d:"Canterella",
+  correct: "b",
+  },
+
+      {
+  question: "19. ¿Cuál es el objeto que representa a Luka Megurine?",
+  image: "19.jpg",
+  a:"Atun",
+  b:"Helado",
+  c:"Telefono",
+  d:"Sake",
+  correct: "a",
+  },
+
+      {
+  question: "20. ¿Que cancion no cantan todos los vocaloid?",
+  image: "20.jpg",
+  a:"Blessing",
+  b:"1,2 fanclub",
+  c:"Senbonzakura",
+  d:"Decorator",
+  correct: "b",
+  },
+
+  ];
+
+
+  const quiz = document.getElementById('quiz');
+  const answerEls = document.querySelectorAll('.answer');
+  const questionEl = document.getElementById('question');
+  const a_text = document.getElementById('a_text');
+  const b_text = document.getElementById('b_text');
+  const c_text = document.getElementById('c_text');
+  const d_text = document.getElementById('d_text');
+  const submitBtn = document.getElementById('submit');
+ 
+ let currentQuiz = 0;
+ let score = 0;
+ loadQuiz();
+
+ function loadQuiz(){
+  deselectAnswers();
+  const currentQuizData = quizData[currentQuiz];
+  questionEl.innerText = currentQuizData.question;
+  a_text.innerText = currentQuizData.a;
+  b_text.innerText = currentQuizData.b;
+  c_text.innerText = currentQuizData.c;
+  d_text.innerText = currentQuizData.d;
+
+const questionImage = document.getElementById("question-image");
+questionImage.src = currentQuizData.image;
+
+ }
+
+ function deselectAnswers(){
+ answerEls.forEach(answerEl => answerEl.checked = false); 
+ }
+
+ function getSelected(){
+  let answer;
+
+  answerEls.forEach(answerEl => {
+    if (answerEl.checked) {
+      answer = answerEl.id;
+    }
+  });
+
+  return answer;
+ }
+
+ submitBtn.addEventListener('click', () => {
+  const answer = getSelected();
+
+  if (answer){
+    if (answer === quizData[currentQuiz].correct){
+      score++;
+    }
+
+    currentQuiz++;
+    if(currentQuiz < quizData.length){
+      loadQuiz()
+    } else {
+      quiz.innerHTML = `
+      <h2>Contestaste ${score}/${quizData.length} de preguntas correctamente</h2>
+
+      <button onclick="location.reload()">Repetir</button>
+      `
+    }
+  }
+ })
+</script>
+
+
+        <footer>
+            <div class="container">
+              <div class="footer-content">
+                <div class="footer-section about">
+                  <h2>Contactame</h2>
+                  <p>Si estas interesado en contactarme, puedes hacerlo en cualquiera de las siguientes redes sociales:</p>
+                 <div class="contact-links">
+                  <a href="http://www.facebook.com/miperfil" target="_blank"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/r0ssy.yy" target="_blank"><i class="fab fa-instagram"></i></a>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          
+          <script type="text/javascript">
+            const socialnetworks = document.querySelectorAll('.contact-links a');
+            socialnetworks.forEach(link =>{
+              link.addEventListener('click', e=>{
+                e.preventDefault();
+                window.open(link.href, '_blank');
+          
+              });
+            });
+            </script>
+        
+    </body>
+</html>

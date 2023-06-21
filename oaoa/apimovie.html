@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Vollkorn:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+	<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+	crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+	<title>Pagina 1</title>
+</head>
+<body>
+  <style> 
+    .container{ 
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    h1{ 
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    form{ 
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+  input[type="text"] {  
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 5px;
+  border:none ;
+  width: 50%;
+  }
+  input[type="submit"] {  
+  font-size: 12px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border:none ;
+  margin-left: 10px;
+  cursor: pointer;
+  }
+  input[type="submit"] :hover {  
+  background-color: rgb(252, 153, 255);
+  color: #b586ff;
+  }
+  .green{
+    color: rgb(68, 255, 68);
+  }
+  .orange{ 
+    color: rgb(255, 163, 43);
+  }
+  .red{
+    color: rgb(255, 47, 47);
+  }
+  
+    </style>
+	<div style="margin: 24px;">
+    <nav class="navbar navbar-light" style="background-color: #264F83;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="formulario.html">Formulario</a>
+                </li>
+                <li>
+                    <a href="resultado.html">Resultado</a>
+                </li>
+                <li>
+                  <a href="cont.html">Contacto</a>
+              </li>
+               
+                    <li>
+                        <a href="calculadorafisica1.html">Fisica</a>
+                    </li>
+                    <li>
+                        <a href="calculadora.html">Calculadora</a>
+                    </li>
+               
+                <li class="active">
+                    <a href="apimovie.html">Peliculas</a>
+                </li>
+                <li>
+                  <a href="perfil.html">Perfil</a>
+              </li>
+                <li>
+                    <a href="cuestionario.html">Custionario</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container">
+  <h1>Pagina de peliculas</h1>
+  <form id="form">
+    <input type="text" id="search" placeholder="Busca aqui tu pelicula">
+    <input type="submit" value="buscar">
+    </form>
+      <section id="main" class="movies"></section>
+
+</div>
+<script>
+
+//en esta linea se define la URL de la API para obtener la lista de peliculas
+
+const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1';                                                   
+
+//en esta linea se define la URL de la API para obtener las imagenes de la pelicula
+
+const IMG_PATH = "http://image.tmdb.org/t/p/w1280";
+
+//en esta linea se define la URL de la API xpara buscar la pelicula
+
+const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query=';
+
+//En estas tres lineas se obtienen los elementos HTML con los que interactua el codigo
+const main = document.getElementById('main');
+const form = document.getElementById('form');
+const search = document.getElementById('search');
+
+//Esta linea llama a la funcion getMovies para obtener la lista de peliculas iniciales
+getMovies(API_URL);
+
+
+//Esta funcion utiliza fetch para obtener la informacion de la API y luego utiliza "await" para esperar a que la informacion de la pelicula para crear los elementos y luego agrega al DOM.
+
+async function getMovies(url) {
+const res = await fetch(url);
+const data = await res.json();
+showMovies(data.results);
+}
+
+
+
+//Esta funcion crea lo elementos HTML para mostrar cada pelicula en la lista. Utiliza la informacion de la pelicula para crear los elementos y luego los agrega al DOM (modelo de objeto de documento, que es una interfaz de programacion para los documentos HTML)
+
+function showMovies(movies){
+main.innerHTML = '';
+movies.forEach((movie) => {
+const { title, poster_path, vote_average, overview, release_date } = movie;
+const movieEl = document.createElement('div');
+
+movieEl.classList.add('movie');
+movieEl.innerHTML = ` 
+<img src="${IMG_PATH + poster_path}" alt="${title}">
+<div class = "movie-info">
+<h3>${title}</h3>
+<span class = "${getClassByRate(vote_average)}">${vote_average}</span>
+</div>
+<div class = "overview">
+<h3>Overview</h3>
+${overview}
+<h3>Release Date</h3>
+${release_date}
+</div>
+`
+main.appendChild(movieEl);
+})
+}
+function getClassByRate(vote){
+if(vote >= 8){
+return 'green';
+} else if (vote >= 5){
+return 'orange';
+} else {
+return 'red';
+}
+}
+form.addEventListener('submit', (e) => {
+e.preventDefault();
+const searchTerm = search.value;
+if(searchTerm && searchTerm !== ''){
+getMovies(SEARCH_API + searchTerm)
+search.value= '';
+} else {
+window.location.reload();
+}
+})
+</script>
+
+
+
+
+    <footer>
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section about">
+              <h2>Contactame</h2>
+              <p>Si estas interesado en contactarme, puedes hacerlo en cualquiera de las siguientes redes sociales:</p>
+             <div class="contact-links">
+              <a href="http://www.facebook.com/miperfil" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/r0ssy.yy" target="_blank"><i class="fab fa-instagram"></i></a>
+             </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      <script type="text/javascript">
+        const socialnetworks = document.querySelectorAll('.contact-links a');
+        socialnetworks.forEach(link =>{
+          link.addEventListener('click', e=>{
+            e.preventDefault();
+            window.open(link.href, '_blank');
+      
+          });
+        });
+        </script>
+
+				
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+{
+	"Menu": [
+		{
+			"nombre":"Hamburguesa", 
+			"descripcion":"Es una Hamburguesa simple con carne, queso, lechuga",
+			 "precio":100,
+			 "imagen":"img/ha.jpg"
+
+			
+		},
+		{
+			"nombre":"Sincronizada", 
+			"descripcion":"Es una taco de harina grande con carne, queso, aguacate",
+			 "precio":80,
+			 "imagen":"img/sin.jpeg"
+			
+		},
+		{
+			"nombre":"Pizza", 
+			"descripcion":"Es una pizza clasica con peperoni",
+			 "precio":90,
+			 "imagen":"img/pi.jpg"
+			
+		},
+		{
+			"nombre":"Tacos", 
+			"descripcion":"Cantidad de orden de 5 tacos con carne, cilantro",
+			 "precio":40,
+			 "imagen":"img/tacos.jpeg"
+
+			
+		},
+		{
+			"nombre":"Nuggets", 
+			"descripcion":"Nuggets hecho de pollo con 15",
+			 "precio":75,
+			 "imagen":"img/nug.jpg"
+			
+		},
+		{
+			"nombre":"Hot Dog", 
+			"descripcion":"Es un hot dog simple con salchica, mayoneza y aderezos",
+			 "precio":30,
+			 "imagen":"img/ho.jpg"
+			
+		},
+		{
+			"nombre":"Torta", 
+			"descripcion":"Torta con jamon,carne,aguacate,lechuga",
+			 "precio":50,
+			 "imagen":"img/torta.jpg"
+			
+		},
+		{
+			"nombre":"Sopes", 
+			"descripcion":"tortilla gruesa de maíz sus ingredientespueden ser frijol,queso,carne,salsa,lechuga",
+			 "precio":150,
+			 "imagen":"img/sopes.jpeg"
+			
+		},
+		{
+			"nombre":"Spaguetti", 
+			"descripcion":"Es una Hamburguesa con carne, queso, lechuga",
+			 "precio":100,
+			 "imagen":"img/espa.jpeg"
+			
+		},
+		{
+			"nombre":"Dumplings", 
+			"descripcion":"Es una Hamburguesa con carne, queso, lechuga",
+			 "precio":105,
+			 "imagen":"img/dum.jpeg"
+			
+		},
+		{
+			"nombre":"Takoyaki", 
+			"descripcion":"Bolitas hechas de masa con pulpo",
+			 "precio":110,
+			 "imagen":"img/Takoyaki.jpeg"
+			
+		},
+		{
+			"nombre":"Onigiri", 
+			"descripcion":"Bola de arroz rellena que puede ser atun, carne, verdura,salmon",
+			 "precio":60,
+			 "imagen":"img/oni.jpeg"
+		},
+		{
+			"nombre":"Sushi", 
+			"descripcion":"Base de arroz con pepimo, salmon,aguacate",
+			 "precio":135,
+			 "imagen":"img/su.jpeg"
+			
+		},
+		{
+			"nombre":"Poke", 
+			"descripcion":"Bowl de poke contiendo salmon, aguacate, arroz",
+			 "precio":120,
+			 "imagen":"img/poke.jpeg"
+			
+		},
+		{
+			"nombre":"Noddles", 
+			"descripcion":"fideos (finos y alargados)",
+			 "precio":80,
+			 "imagen":"img/no.jpeg"
+			
+		},
+		{
+			"nombre":"Gyoza", 
+			"descripcion":"Empanadillas rellena de verduras, cerdo, pollo o gambas",
+			 "precio":95,
+			 "imagen":"img/gyoza.jpeg"
+			},
+
+		{
+			"nombre":"Lasagna", 
+			"descripcion":"pasta en láminas con distintos ingredientes (carnes, verduras, pescados)",
+			 "precio":98,
+			 "imagen":"img/la.jpeg"
+			
+		},
+		{
+			"nombre":"Bolognese", 
+			"descripcion":"Spaguetti tipo bolognese con aderezos y carne",
+			 "precio":75,
+			 "imagen":"img/bol.jpeg"
+			
+		}
+		
+	],
+"Extras":[
+	{
+		"nombre":"Tomate",
+		"descripcion":"Spaguetti tipo bolognese con aderezos y carne",
+	    "precio":1.5,
+	   "imagen":"img/bol.jpeg"
+		
+	},
+	{
+		"nombre":"Tocino",
+		"descripcion":"Se agrega tocino extra",
+	    "precio":5,
+	   "imagen":"img/tocino.jpeg"
+	},
+	{
+		"nombre":"Lechuga",
+		"descripcion":"Se hecha mas lechuga extra",
+	    "precio":2.6,
+	   "imagen":"img/le.jpeg"
+		
+	},
+	{
+		"nombre":"Aderezos",
+		"descripcion":"Se agregan 3 tipops de aderezos",
+	    "precio":30,
+	   "imagen":"img/ade.jpeg"
+	
+	},
+	{
+		"nombre":"Cebolla",
+		"descripcion":"Cantidad de cebolla extra",
+	    "precio":2,
+	   "imagen":"img/ce.jpeg"
+	},
+	{
+		"nombre":"Queso",
+		"descripcion":"Se agrega mas queso al producto",
+	    "precio":4.5,
+	   "imagen":"img/q.jpeg"
+		
+	}
+
+],
+"Bebidas":[
+{
+	"nombre":"Coca",
+	"descripcion":"Lata de soda",
+	"precio":"18",
+	"imagen":"img/coca.jpg"
+},
+{
+	"nombre":"Agua de horchata",
+	"descripcion":"Agua de sabor, se da en jarra",
+	"precio":"100",
+	"imagen":"img/hor.jpg"
+},
+{
+	"nombre":"Limonada",
+	"descripcion":"Agua de sabor en un vaso de vidrio",
+	"precio":"25",
+	"imagen":"img/li.jpeg"
+},
+{
+	"nombre":"Pepsi",
+	"descripcion":"Lada de soda",
+	"precio":"16",
+	"imagen":"img/pepsi.jpg"
+},
+{
+	"nombre":"Coctel",
+	"descripcion":"Coctel con vodka y licor de melocoton",
+	"precio":10,
+	"imagen":"img/coctel.jpg"
+}]}
+		
+			
+		
